@@ -7,7 +7,7 @@ add_filter( 'rwmb_meta_boxes', function( $meta_boxes )
 		'post_types' => array( 'post', 'page' ),
 		'context'	=> 'normal',
 		'priority'	=> 'high',
-		// Hide this meta box when post format is aside
+		// Show this field by default. Hide this meta box when post format is aside
 		'hidden' => array( 'post_format', '=', 'aside' ),
 		'fields' => array(
 			array(
