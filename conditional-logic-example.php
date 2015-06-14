@@ -16,8 +16,8 @@ add_filter( 'rwmb_meta_boxes', function( $meta_boxes )
 				'desc'	=> 'Pick Your Favourite Brand',
 				'type'	=> 'select',
 				'options' => array(
-					'Apple' 		=> 'Apple',
-					'Google' 		=> 'Google',
+					'Apple' 	=> 'Apple',
+					'Google' 	=> 'Google',
 					'Microsoft' 	=> 'Microsoft'
 				)
 			),
