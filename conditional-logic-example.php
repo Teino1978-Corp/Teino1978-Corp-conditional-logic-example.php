@@ -8,8 +8,8 @@ add_filter( 'rwmb_meta_boxes', function( $meta_boxes )
 		'context'	=> 'normal',
 		'priority'	=> 'high',
 		// Conditional Logic can be applied to Meta Box
-		// Show this Meta Box by default. Hide it when post format is aside
-		'hidden' => array( 'post_format', '=', 'aside' ),
+		// In this example: Show this Meta Box by default. Hide it when post format is aside
+		'hidden' => array( 'post_format', 'aside' ),
 		'fields' => array(
 			array(
 				'id'	=> 'brand',
@@ -33,8 +33,9 @@ add_filter( 'rwmb_meta_boxes', function( $meta_boxes )
 					'iWatch'	=> 'iWatch'
 				),
 				// Conditional Logic can applied to fields
-				// Hide this field by default, show it only when user select 'Apple' on brand select field
-				'visible' => array( 'brand', '=', 'Apple' )
+				// In this example: Hide this field by default, 
+				// show it only when user select 'Apple' on brand select field
+				'hidden' => array( 'brand', '!=', 'Apple' )
 			)
 		)
 	);
