@@ -1,4 +1,5 @@
-<?phpadd_filter( 'rwmb_meta_boxes', function( $meta_boxes )
+<?php
+add_filter( 'rwmb_meta_boxes', function( $meta_boxes )
 {
 	$meta_boxes[] = array(
 		'id' => 'brand_product',
