@@ -33,8 +33,8 @@ add_filter( 'rwmb_meta_boxes', function( $meta_boxes )
 					'iWatch'	=> 'iWatch'
 				),
 				// Conditional Logic can applied to fields
-				// In this example: Hide this field by default, 
-				// show it only when user select 'Apple' on brand select field
+				// In this example: Show this field by default, 
+				// hide it when user different value than 'Apple' on brand select field
 				'hidden' => array( 'brand', '!=', 'Apple' )
 			)
 		)
