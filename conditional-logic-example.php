@@ -1,9 +1,8 @@
-<?php
-add_filter( 'rwmb_meta_boxes', function( $meta_boxes )
+<?phpadd_filter( 'rwmb_meta_boxes', function( $meta_boxes )
 {
 	$meta_boxes[] = array(
-		'id' => 'demo',
-		'title' => 'Demo Conditional Logic',
+		'id' => 'brand_product',
+		'title' => 'Brands and Products',
 		'post_types' => array( 'post', 'page' ),
 		'context'	=> 'normal',
 		'priority'	=> 'high',
@@ -17,14 +16,14 @@ add_filter( 'rwmb_meta_boxes', function( $meta_boxes )
 				'desc'	=> 'Pick Your Favourite Brand',
 				'type'	=> 'select',
 				'options' => array(
-					'Apple' 	=> 'Apple',
-					'Google' 	=> 'Google',
+					'Apple' 		=> 'Apple',
+					'Google' 		=> 'Google',
 					'Microsoft' 	=> 'Microsoft'
 				)
 			),
 			array(
 				'id' 	=> 'apple_products',
-				'name'	=> 'Which product that you want to throw away?',
+				'name'	=> 'Which Apple product that you love?',
 				'type'	=> 'radio',
 				'options' => array(
 					'iPhone' 	=> 'iPhone',
@@ -34,7 +33,7 @@ add_filter( 'rwmb_meta_boxes', function( $meta_boxes )
 				),
 				// Conditional Logic can applied to fields
 				// In this example: Show this field by default, 
-				// hide it when user different value than 'Apple' on brand select field
+				// hide it when user selected different value than 'Apple' on brand select field
 				'hidden' => array( 'brand', '!=', 'Apple' )
 			)
 		)
